@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.DisplayDiv {
+	@apply w-screen h-screen;
+}
+
+/* Both Method1 and Method2 result in the same output which should be avoided */
+.Method1 {
+	background-image: url("../public/assets/img.jpg");
+}
+
+.Method2 {
+	@apply bg-[url('../public/assets/img.jpg')];
+}
